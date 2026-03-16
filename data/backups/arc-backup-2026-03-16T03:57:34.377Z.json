@@ -1,0 +1,1898 @@
+{
+  "metadata": {
+    "timestamp": "2026-03-16T03:57:31.013Z",
+    "version": "1.0.0",
+    "fragments": [
+      "contexts",
+      "types",
+      "elements",
+      "bodies",
+      "ecosystems",
+      "domains",
+      "environments"
+    ],
+    "itemCounts": {
+      "contexts": 7,
+      "types": 35,
+      "elements": 0,
+      "bodies": 0,
+      "ecosystems": 2,
+      "domains": 4,
+      "environments": 1
+    }
+  },
+  "data": {
+    "contexts": [
+      {
+        "id": "art-of-seeing",
+        "name": "The Art of Seeing",
+        "description": "Visual art and observation management",
+        "menuSubtitle": "",
+        "icon": "Eye",
+        "color": "#00AEEF",
+        "visibleInAdmin": true,
+        "types": [
+          "galleries"
+        ],
+        "provider": {
+          "type": "local"
+        },
+        "createdAt": "2026-03-14T16:26:08.077Z",
+        "updatedAt": "2026-03-16T02:07:03.007Z"
+      },
+      {
+        "id": "system",
+        "name": "System",
+        "description": "The meta-layer where ARC manages itself",
+        "menuSubtitle": "ARC builds itself with its own tools",
+        "icon": "Target",
+        "color": "#72BF44",
+        "visibleInAdmin": true,
+        "types": [
+          "extensions",
+          "providers",
+          "forms",
+          "lab",
+          "docs",
+          "environments",
+          "types",
+          "contexts",
+          "fields",
+          "bodies",
+          "elements",
+          "agents",
+          "roles",
+          "access"
+        ],
+        "provider": {
+          "type": "github",
+          "config": {
+            "providerId": "github-github-storage",
+            "owner": "builders",
+            "repo": "arc-system",
+            "branch": "main",
+            "path": "data/",
+            "token": "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"
+          }
+        },
+        "createdAt": "2026-03-14T16:26:08.253Z",
+        "updatedAt": "2026-03-16T03:50:24.242Z"
+      },
+      {
+        "id": "debug-devkit",
+        "name": "Debug DevKit",
+        "description": "The meta-layer where Debug DevKit manages its own interface",
+        "icon": "Terminal",
+        "color": "#92278F",
+        "visibleInAdmin": false,
+        "types": [
+          "debug-menu-item",
+          "debug-view",
+          "debug-setting"
+        ],
+        "provider": {
+          "type": "local"
+        },
+        "createdAt": "2026-03-14T16:26:08.257Z",
+        "updatedAt": "2026-03-15T22:34:21.513Z"
+      },
+      {
+        "id": "component-registry",
+        "name": "Component Registry",
+        "description": "The meta-layer where ARC stores component definitions for self-assembly",
+        "icon": "Package",
+        "color": "#F7941E",
+        "visibleInAdmin": false,
+        "types": [
+          "component-category",
+          "component",
+          "manifest",
+          "manifest-entry"
+        ],
+        "provider": {
+          "type": "local"
+        },
+        "createdAt": "2026-03-14T16:26:08.261Z",
+        "updatedAt": "2026-03-15T22:34:04.575Z"
+      },
+      {
+        "id": "agents",
+        "name": "Agents",
+        "description": "AI agents and automated workflows",
+        "icon": "Users",
+        "color": "#27BDBE",
+        "visibleInAdmin": false,
+        "types": [
+          "agent"
+        ],
+        "provider": {
+          "type": "local"
+        },
+        "createdAt": "2026-03-15T17:04:25.965Z",
+        "updatedAt": "2026-03-15T22:34:53.158Z"
+      },
+      {
+        "id": "call-response",
+        "name": "Call + Response",
+        "description": "Development conversation logger for Figma Make projects",
+        "icon": "MessageSquare",
+        "color": "#BFD730",
+        "visibleInAdmin": true,
+        "types": [
+          "call-response-prompt",
+          "call-response-response",
+          "call-response-commit",
+          "call-response-build",
+          "call-response-milestone",
+          "call-response-issue",
+          "call-response-timeline"
+        ],
+        "provider": {
+          "type": "local"
+        },
+        "createdAt": "2026-03-15T22:25:39.899Z",
+        "updatedAt": "2026-03-15T22:30:02.581Z"
+      },
+      {
+        "id": "bldrs",
+        "name": "BLDRS Collective",
+        "description": "Symphony CMS-inspired content management for builderscollective.com",
+        "icon": "Layers",
+        "color": "pink",
+        "visibleInAdmin": true,
+        "types": [
+          "bldrs-article",
+          "bldrs-page",
+          "bldrs-project",
+          "bldrs-event",
+          "bldrs-course"
+        ],
+        "provider": {
+          "type": "local"
+        },
+        "createdAt": "2026-03-16T01:34:55.410Z",
+        "updatedAt": "2026-03-16T01:34:55.410Z"
+      }
+    ],
+    "types": [
+      {
+        "id": "extensions",
+        "contextId": "system",
+        "name": "Extensions",
+        "namePlural": "Extensions",
+        "icon": "Package",
+        "color": "turquoise",
+        "description": "Manage ARC extensions and plugins",
+        "order": 8,
+        "display": true,
+        "fields": [
+          {
+            "id": "name",
+            "label": "Name",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "description",
+            "label": "Description",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "enabled",
+            "label": "Enabled",
+            "type": "boolean",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-14T16:26:08.254Z",
+        "updatedAt": "2026-03-16T01:31:34.398Z"
+      },
+      {
+        "id": "providers",
+        "contextId": "system",
+        "name": "Providers",
+        "namePlural": "Providers",
+        "icon": "Database",
+        "color": "green",
+        "description": "Manage data storage and sync providers",
+        "order": 7,
+        "display": true,
+        "fields": [
+          {
+            "id": "name",
+            "label": "Name",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "type",
+            "label": "Type",
+            "type": "select",
+            "required": true
+          },
+          {
+            "id": "config",
+            "label": "Configuration",
+            "type": "json",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-14T16:26:08.255Z",
+        "updatedAt": "2026-03-16T01:31:34.398Z"
+      },
+      {
+        "id": "forms",
+        "contextId": "system",
+        "name": "Forms",
+        "namePlural": "Forms",
+        "icon": "Layout",
+        "color": "gold",
+        "description": "Visual form builder and designer",
+        "order": 4,
+        "display": true,
+        "fields": [
+          {
+            "id": "name",
+            "label": "Name",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "type_id",
+            "label": "Type",
+            "type": "relation",
+            "required": true
+          },
+          {
+            "id": "config",
+            "label": "Configuration",
+            "type": "json",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-14T16:26:08.255Z",
+        "updatedAt": "2026-03-16T01:31:34.399Z"
+      },
+      {
+        "id": "lab",
+        "contextId": "system",
+        "name": "Lab",
+        "namePlural": "Experiments",
+        "icon": "Sparkles",
+        "color": "cyan",
+        "description": "Experimental features and prototypes",
+        "order": 9,
+        "display": true,
+        "fields": [
+          {
+            "id": "name",
+            "label": "Name",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "description",
+            "label": "Description",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "status",
+            "label": "Status",
+            "type": "select",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-14T16:26:08.255Z",
+        "updatedAt": "2026-03-16T01:31:34.399Z"
+      },
+      {
+        "id": "docs",
+        "contextId": "system",
+        "name": "Docs",
+        "namePlural": "Documentation",
+        "icon": "BookOpen",
+        "color": "purple",
+        "description": "System documentation and guides",
+        "order": 10,
+        "display": true,
+        "fields": [
+          {
+            "id": "title",
+            "label": "Title",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "path",
+            "label": "Path",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "content",
+            "label": "Content",
+            "type": "markdown",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-14T16:26:08.255Z",
+        "updatedAt": "2026-03-16T01:31:34.400Z"
+      },
+      {
+        "id": "debug-menu-item",
+        "contextId": "debug-devkit",
+        "name": "Menu Item",
+        "namePlural": "Menu Item",
+        "icon": "menu",
+        "description": "A menu item in the Debug DevKit sidebar",
+        "order": 1,
+        "display": true,
+        "fields": [
+          {
+            "id": "view_id",
+            "label": "View ID",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "label",
+            "label": "Label",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "icon",
+            "label": "Icon",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "description",
+            "label": "Description",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "order",
+            "label": "Order",
+            "type": "number",
+            "required": true
+          },
+          {
+            "id": "enabled",
+            "label": "Enabled",
+            "type": "boolean",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-14T16:26:08.257Z",
+        "updatedAt": "2026-03-15T22:34:21.514Z"
+      },
+      {
+        "id": "debug-view",
+        "contextId": "debug-devkit",
+        "name": "View",
+        "namePlural": "View",
+        "icon": "layout",
+        "description": "A view/panel configuration in the Debug DevKit",
+        "order": 2,
+        "display": true,
+        "fields": [
+          {
+            "id": "view_id",
+            "label": "View ID",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "component",
+            "label": "Component",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "title",
+            "label": "Title",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "config",
+            "label": "Configuration",
+            "type": "json",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-14T16:26:08.257Z",
+        "updatedAt": "2026-03-15T22:34:21.514Z"
+      },
+      {
+        "id": "debug-setting",
+        "contextId": "debug-devkit",
+        "name": "Setting",
+        "namePlural": "Setting",
+        "icon": "settings",
+        "description": "A configuration setting for the Debug DevKit",
+        "order": 3,
+        "display": true,
+        "fields": [
+          {
+            "id": "key",
+            "label": "Key",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "value",
+            "label": "Value",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "type",
+            "label": "Type",
+            "type": "select",
+            "required": true
+          },
+          {
+            "id": "description",
+            "label": "Description",
+            "type": "textarea",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-14T16:26:08.257Z",
+        "updatedAt": "2026-03-15T22:34:21.515Z"
+      },
+      {
+        "id": "component-category",
+        "contextId": "component-registry",
+        "name": "Component Category",
+        "namePlural": "Component Category",
+        "icon": "folder",
+        "description": "A category for organizing components (forms, views, elements, layouts, etc.)",
+        "order": 1,
+        "display": true,
+        "fields": [
+          {
+            "id": "name",
+            "label": "Name",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "slug",
+            "label": "Slug",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "description",
+            "label": "Description",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "icon",
+            "label": "Icon",
+            "type": "text",
+            "required": false
+          },
+          {
+            "id": "order",
+            "label": "Order",
+            "type": "number",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-14T16:26:08.261Z",
+        "updatedAt": "2026-03-15T22:34:04.575Z"
+      },
+      {
+        "id": "component",
+        "contextId": "component-registry",
+        "name": "Component",
+        "namePlural": "Component",
+        "icon": "box",
+        "description": "A React component definition with code and metadata",
+        "order": 2,
+        "display": true,
+        "fields": [
+          {
+            "id": "category_id",
+            "label": "Category",
+            "type": "relation",
+            "required": true
+          },
+          {
+            "id": "name",
+            "label": "Name",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "slug",
+            "label": "Slug",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "description",
+            "label": "Description",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "component_code",
+            "label": "Component Code",
+            "type": "code",
+            "required": true
+          },
+          {
+            "id": "dependencies",
+            "label": "Dependencies",
+            "type": "json",
+            "required": false
+          },
+          {
+            "id": "imports",
+            "label": "Imports",
+            "type": "code",
+            "required": false
+          },
+          {
+            "id": "exports",
+            "label": "Exports",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "file_path",
+            "label": "File Path",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "github_url",
+            "label": "GitHub URL",
+            "type": "url",
+            "required": false
+          },
+          {
+            "id": "version",
+            "label": "Version",
+            "type": "text",
+            "required": false
+          },
+          {
+            "id": "tags",
+            "label": "Tags",
+            "type": "json",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-14T16:26:08.262Z",
+        "updatedAt": "2026-03-15T22:34:04.576Z"
+      },
+      {
+        "id": "manifest",
+        "contextId": "component-registry",
+        "name": "Manifest",
+        "namePlural": "Manifest",
+        "icon": "file-code",
+        "description": "A manifest describing how to assemble an application from components",
+        "order": 3,
+        "display": true,
+        "fields": [
+          {
+            "id": "name",
+            "label": "Name",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "version",
+            "label": "Version",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "description",
+            "label": "Description",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "github_repo",
+            "label": "GitHub Repository",
+            "type": "url",
+            "required": false
+          },
+          {
+            "id": "entrypoint",
+            "label": "Entrypoint",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "manifest_json",
+            "label": "Manifest JSON",
+            "type": "code",
+            "required": true
+          }
+        ],
+        "createdAt": "2026-03-14T16:26:08.262Z",
+        "updatedAt": "2026-03-15T22:34:04.576Z"
+      },
+      {
+        "id": "manifest-entry",
+        "contextId": "component-registry",
+        "name": "Manifest Entry",
+        "namePlural": "Manifest Entry",
+        "icon": "file-plus",
+        "description": "An individual component placement in a manifest",
+        "order": 4,
+        "display": true,
+        "fields": [
+          {
+            "id": "manifest_id",
+            "label": "Manifest",
+            "type": "relation",
+            "required": true
+          },
+          {
+            "id": "component_id",
+            "label": "Component",
+            "type": "relation",
+            "required": true
+          },
+          {
+            "id": "placement",
+            "label": "Placement",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "config",
+            "label": "Configuration",
+            "type": "json",
+            "required": false
+          },
+          {
+            "id": "order",
+            "label": "Order",
+            "type": "number",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-14T16:26:08.262Z",
+        "updatedAt": "2026-03-15T22:34:04.577Z"
+      },
+      {
+        "id": "environments",
+        "contextId": "system",
+        "name": "Environments",
+        "namePlural": "Environments",
+        "icon": "Earth",
+        "color": "red",
+        "description": "Manage ecosystems, domains, and deployment environments",
+        "order": 2,
+        "display": true,
+        "fields": [
+          {
+            "id": "name",
+            "label": "Name",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "description",
+            "label": "Description",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "url",
+            "label": "URL",
+            "type": "url",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-14T16:26:08.265Z",
+        "updatedAt": "2026-03-16T01:31:34.400Z"
+      },
+      {
+        "id": "contexts",
+        "contextId": "system",
+        "name": "Contexts",
+        "namePlural": "Contexts",
+        "icon": "Globe",
+        "color": "orange",
+        "description": "A workspace context containing related types",
+        "order": 3,
+        "display": true,
+        "fields": [
+          {
+            "id": "name",
+            "label": "Name",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "handle",
+            "label": "Handle",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "description",
+            "label": "Description",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "icon",
+            "label": "Icon",
+            "type": "text",
+            "required": false
+          },
+          {
+            "id": "color",
+            "label": "Color",
+            "type": "color",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-14T18:30:46.244Z",
+        "updatedAt": "2026-03-16T01:31:34.401Z"
+      },
+      {
+        "id": "types",
+        "contextId": "system",
+        "name": "Types",
+        "namePlural": "Types",
+        "icon": "Shapes",
+        "color": "yellow",
+        "description": "A content type schema with fields",
+        "order": 5,
+        "display": true,
+        "fields": [
+          {
+            "id": "context_id",
+            "label": "Context",
+            "type": "relation",
+            "required": true
+          },
+          {
+            "id": "name",
+            "label": "Name",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "handle",
+            "label": "Handle",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "description",
+            "label": "Description",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "icon",
+            "label": "Icon",
+            "type": "text",
+            "required": false
+          },
+          {
+            "id": "is_singleton",
+            "label": "Singleton",
+            "type": "boolean",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-14T18:30:46.244Z",
+        "updatedAt": "2026-03-16T01:31:34.400Z"
+      },
+      {
+        "id": "fields",
+        "contextId": "system",
+        "name": "Fields",
+        "namePlural": "Fields",
+        "icon": "input",
+        "description": "A field definition within a type",
+        "order": 4,
+        "display": false,
+        "fields": [
+          {
+            "id": "type_id",
+            "label": "Type",
+            "type": "relation",
+            "required": true
+          },
+          {
+            "id": "field_id",
+            "label": "Field ID",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "name",
+            "label": "Name",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "field_type",
+            "label": "Field Type",
+            "type": "select",
+            "required": true
+          },
+          {
+            "id": "required",
+            "label": "Required",
+            "type": "boolean",
+            "required": false
+          },
+          {
+            "id": "config",
+            "label": "Configuration",
+            "type": "json",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-14T18:30:46.245Z",
+        "updatedAt": "2026-03-16T01:31:34.402Z"
+      },
+      {
+        "id": "elements",
+        "contextId": "system",
+        "name": "Elements",
+        "namePlural": "Elements",
+        "icon": "Atom",
+        "color": "lime",
+        "description": "A custom element instance",
+        "order": 6,
+        "display": true,
+        "fields": [
+          {
+            "id": "type_id",
+            "label": "Type",
+            "type": "relation",
+            "required": true
+          },
+          {
+            "id": "title",
+            "label": "Title",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "status",
+            "label": "Status",
+            "type": "select",
+            "required": false
+          },
+          {
+            "id": "created_at",
+            "label": "Created",
+            "type": "datetime",
+            "required": false
+          },
+          {
+            "id": "updated_at",
+            "label": "Updated",
+            "type": "datetime",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-14T18:30:46.245Z",
+        "updatedAt": "2026-03-16T01:31:34.403Z"
+      },
+      {
+        "id": "bodies",
+        "contextId": "system",
+        "name": "Bodies",
+        "namePlural": "Bodies",
+        "icon": "AppWindow",
+        "description": "A page layout for displaying elements",
+        "order": 3,
+        "display": false,
+        "fields": [
+          {
+            "id": "type_id",
+            "label": "Type",
+            "type": "relation",
+            "required": true
+          },
+          {
+            "id": "name",
+            "label": "Name",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "layout",
+            "label": "Layout",
+            "type": "select",
+            "required": true
+          },
+          {
+            "id": "config",
+            "label": "Configuration",
+            "type": "json",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-14T18:30:46.245Z",
+        "updatedAt": "2026-03-16T01:31:34.402Z"
+      },
+      {
+        "id": "agents",
+        "contextId": "system",
+        "name": "Agents",
+        "namePlural": "Agents",
+        "icon": "CircleUser",
+        "color": "magenta",
+        "description": "Agents can be (Super) Admin, Owners, Directors, Conductors, Developers, Editors, Authors, Members, and Public. Each should have an email and password, first and last name, full name, role, and access privileges.",
+        "order": 1,
+        "display": true,
+        "fields": [
+          {
+            "id": "agent_id",
+            "label": "Agent ID",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "first_name",
+            "label": "First Name",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "last_name",
+            "label": "Last Name",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "email",
+            "label": "Email Address",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "password",
+            "label": "Password",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "role",
+            "fieldTypeId": "relation",
+            "label": "Role",
+            "required": true,
+            "defaultValue": "roles",
+            "config": {
+              "helpText": "Select a role for this agent"
+            }
+          }
+        ],
+        "createdAt": "2026-03-15T15:03:46.779Z",
+        "updatedAt": "2026-03-16T03:54:24.305Z"
+      },
+      {
+        "id": "agent",
+        "contextId": "agents",
+        "name": "Agent",
+        "namePlural": "Agents",
+        "icon": "Bot",
+        "description": "An AI agent with specific capabilities and goals",
+        "order": 1,
+        "display": true,
+        "fields": [
+          {
+            "id": "name",
+            "label": "Name",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "handle",
+            "label": "Handle",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "description",
+            "label": "Description",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "type",
+            "label": "Type",
+            "type": "select",
+            "required": true
+          },
+          {
+            "id": "model",
+            "label": "Model",
+            "type": "select",
+            "required": false
+          },
+          {
+            "id": "system_prompt",
+            "label": "System Prompt",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "capabilities",
+            "label": "Capabilities",
+            "type": "multiselect",
+            "required": false
+          },
+          {
+            "id": "context_window",
+            "label": "Context Window",
+            "type": "number",
+            "required": false
+          },
+          {
+            "id": "temperature",
+            "label": "Temperature",
+            "type": "range",
+            "required": false
+          },
+          {
+            "id": "max_tokens",
+            "label": "Max Tokens",
+            "type": "number",
+            "required": false
+          },
+          {
+            "id": "tools",
+            "label": "Tools Configuration",
+            "type": "json",
+            "required": false
+          },
+          {
+            "id": "status",
+            "label": "Status",
+            "type": "select",
+            "required": false
+          },
+          {
+            "id": "color",
+            "label": "Color",
+            "type": "color",
+            "required": false
+          },
+          {
+            "id": "icon",
+            "label": "Icon",
+            "type": "text",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-15T17:04:25.965Z",
+        "updatedAt": "2026-03-15T22:34:53.158Z"
+      },
+      {
+        "id": "roles",
+        "contextId": "system",
+        "name": "Role",
+        "namePlural": "Roles",
+        "icon": "Shield",
+        "description": "User and agent roles within the system",
+        "order": 2,
+        "display": false,
+        "fields": [
+          {
+            "id": "role_id",
+            "label": "Role ID",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "handle",
+            "label": "Handle",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "name",
+            "label": "Name",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "description",
+            "label": "Description",
+            "type": "textarea",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-15T17:37:15.096Z",
+        "updatedAt": "2026-03-16T01:31:34.403Z"
+      },
+      {
+        "id": "access",
+        "contextId": "system",
+        "name": "Access",
+        "namePlural": "Access",
+        "icon": "Key",
+        "description": "Access privileges and permissions",
+        "order": 3,
+        "display": false,
+        "fields": [
+          {
+            "id": "access_id",
+            "label": "Access ID",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "handle",
+            "label": "Handle",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "name",
+            "label": "Name",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "description",
+            "label": "Description",
+            "type": "textarea",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-15T17:45:43.214Z",
+        "updatedAt": "2026-03-16T01:31:34.404Z"
+      },
+      {
+        "id": "call-response-prompt",
+        "contextId": "call-response",
+        "name": "Prompts",
+        "namePlural": "Prompts",
+        "nameSingular": "",
+        "handle": "call-response-prompt",
+        "description": "Prompts for Call + Response",
+        "icon": "MessageSquare",
+        "color": "magenta",
+        "order": 1,
+        "display": true,
+        "fields": [
+          {
+            "id": "title",
+            "label": "Title",
+            "fieldTypeId": "text",
+            "required": true
+          },
+          {
+            "id": "body",
+            "label": "Body",
+            "fieldTypeId": "textarea",
+            "required": false
+          },
+          {
+            "id": "model",
+            "label": "AI Model",
+            "fieldTypeId": "text",
+            "required": false
+          },
+          {
+            "id": "context",
+            "label": "Context",
+            "fieldTypeId": "text",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-15T22:25:39.899Z",
+        "updatedAt": "2026-03-16T01:27:21.184Z"
+      },
+      {
+        "id": "call-response-response",
+        "contextId": "call-response",
+        "name": "Responses",
+        "namePlural": "Responses",
+        "nameSingular": "",
+        "handle": "call-response-response",
+        "description": "Responses for Call + Response",
+        "icon": "Sparkles",
+        "color": "red",
+        "order": 2,
+        "display": true,
+        "fields": [
+          {
+            "id": "title",
+            "label": "Title",
+            "fieldTypeId": "text",
+            "required": true
+          },
+          {
+            "id": "body",
+            "label": "Body",
+            "fieldTypeId": "textarea",
+            "required": false
+          },
+          {
+            "id": "prompt_id",
+            "label": "Related Prompt",
+            "fieldTypeId": "relation",
+            "required": false
+          },
+          {
+            "id": "model",
+            "label": "AI Model",
+            "fieldTypeId": "text",
+            "required": false
+          },
+          {
+            "id": "tokens",
+            "label": "Tokens Used",
+            "fieldTypeId": "number",
+            "required": false
+          },
+          {
+            "id": "status",
+            "label": "Status",
+            "fieldTypeId": "select",
+            "required": false,
+            "options": [
+              "success",
+              "partial",
+              "failed",
+              "needs-revision"
+            ]
+          }
+        ],
+        "createdAt": "2026-03-15T22:25:39.899Z",
+        "updatedAt": "2026-03-16T01:27:55.079Z"
+      },
+      {
+        "id": "call-response-commit",
+        "contextId": "call-response",
+        "name": "Commits",
+        "namePlural": "Commits",
+        "nameSingular": "",
+        "handle": "call-response-commit",
+        "description": "Commits for Call + Response",
+        "icon": "GitCommit",
+        "color": "yellow",
+        "order": 3,
+        "display": true,
+        "fields": [
+          {
+            "id": "title",
+            "label": "Title",
+            "fieldTypeId": "text",
+            "required": true
+          },
+          {
+            "id": "body",
+            "label": "Body",
+            "fieldTypeId": "textarea",
+            "required": false
+          },
+          {
+            "id": "response_id",
+            "label": "Related Response",
+            "fieldTypeId": "relation",
+            "required": false
+          },
+          {
+            "id": "commit_sha",
+            "label": "Commit SHA",
+            "fieldTypeId": "text",
+            "required": false
+          },
+          {
+            "id": "repository",
+            "label": "Repository",
+            "fieldTypeId": "text",
+            "required": false
+          },
+          {
+            "id": "branch",
+            "label": "Branch",
+            "fieldTypeId": "text",
+            "required": false
+          },
+          {
+            "id": "files_changed",
+            "label": "Files Changed",
+            "fieldTypeId": "number",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-15T22:25:39.900Z",
+        "updatedAt": "2026-03-16T01:28:20.670Z"
+      },
+      {
+        "id": "call-response-build",
+        "contextId": "call-response",
+        "name": "Builds",
+        "namePlural": "Builds",
+        "nameSingular": "",
+        "handle": "call-response-build",
+        "description": "Builds for Call + Response",
+        "icon": "Package",
+        "color": "lime",
+        "order": 4,
+        "display": true,
+        "fields": [
+          {
+            "id": "title",
+            "label": "Title",
+            "fieldTypeId": "text",
+            "required": true
+          },
+          {
+            "id": "body",
+            "label": "Body",
+            "fieldTypeId": "textarea",
+            "required": false
+          },
+          {
+            "id": "commit_id",
+            "label": "Related Commit",
+            "fieldTypeId": "relation",
+            "required": false
+          },
+          {
+            "id": "status",
+            "label": "Build Status",
+            "fieldTypeId": "select",
+            "required": false,
+            "options": [
+              "success",
+              "failed",
+              "in-progress",
+              "cancelled"
+            ]
+          },
+          {
+            "id": "duration",
+            "label": "Duration (seconds)",
+            "fieldTypeId": "number",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-15T22:25:39.900Z",
+        "updatedAt": "2026-03-16T01:28:27.603Z"
+      },
+      {
+        "id": "call-response-milestone",
+        "contextId": "call-response",
+        "name": "Milestones",
+        "namePlural": "Milestones",
+        "nameSingular": "",
+        "handle": "call-response-milestone",
+        "description": "Milestones for Call + Response",
+        "icon": "Flag",
+        "color": "turquoise",
+        "order": 5,
+        "display": true,
+        "fields": [
+          {
+            "id": "title",
+            "label": "Title",
+            "fieldTypeId": "text",
+            "required": true
+          },
+          {
+            "id": "body",
+            "label": "Body",
+            "fieldTypeId": "textarea",
+            "required": false
+          },
+          {
+            "id": "progress",
+            "label": "Progress (%)",
+            "fieldTypeId": "number",
+            "required": false
+          },
+          {
+            "id": "due_date",
+            "label": "Due Date",
+            "fieldTypeId": "date",
+            "required": false
+          },
+          {
+            "id": "status",
+            "label": "Status",
+            "fieldTypeId": "select",
+            "required": false,
+            "options": [
+              "planned",
+              "in-progress",
+              "completed",
+              "blocked"
+            ]
+          }
+        ],
+        "createdAt": "2026-03-15T22:25:39.900Z",
+        "updatedAt": "2026-03-16T01:28:34.279Z"
+      },
+      {
+        "id": "call-response-issue",
+        "contextId": "call-response",
+        "name": "Issues",
+        "namePlural": "Issues",
+        "nameSingular": "",
+        "handle": "call-response-issue",
+        "description": "Issues for Call + Response",
+        "icon": "AlertCircle",
+        "color": "cyan",
+        "order": 6,
+        "display": true,
+        "fields": [
+          {
+            "id": "title",
+            "label": "Title",
+            "fieldTypeId": "text",
+            "required": true
+          },
+          {
+            "id": "body",
+            "label": "Body",
+            "fieldTypeId": "textarea",
+            "required": false
+          },
+          {
+            "id": "priority",
+            "label": "Priority",
+            "fieldTypeId": "select",
+            "required": false,
+            "options": [
+              "low",
+              "medium",
+              "high",
+              "critical"
+            ]
+          },
+          {
+            "id": "status",
+            "label": "Status",
+            "fieldTypeId": "select",
+            "required": false,
+            "options": [
+              "open",
+              "in-progress",
+              "resolved",
+              "closed"
+            ]
+          },
+          {
+            "id": "related_commit",
+            "label": "Related Commit",
+            "fieldTypeId": "relation",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-15T22:25:39.901Z",
+        "updatedAt": "2026-03-16T01:28:44.058Z"
+      },
+      {
+        "id": "call-response-timeline",
+        "contextId": "call-response",
+        "name": "Timeline",
+        "namePlural": "Timeline",
+        "nameSingular": "",
+        "handle": "call-response-timeline",
+        "description": "Timeline for Call + Response",
+        "icon": "Clock",
+        "color": "violet",
+        "order": 7,
+        "display": true,
+        "fields": [
+          {
+            "id": "title",
+            "label": "Title",
+            "fieldTypeId": "text",
+            "required": true
+          },
+          {
+            "id": "body",
+            "label": "Body",
+            "fieldTypeId": "textarea",
+            "required": false
+          },
+          {
+            "id": "event_type",
+            "label": "Event Type",
+            "fieldTypeId": "select",
+            "required": false,
+            "options": [
+              "development",
+              "deployment",
+              "meeting",
+              "decision",
+              "other"
+            ]
+          },
+          {
+            "id": "duration",
+            "label": "Duration (minutes)",
+            "fieldTypeId": "number",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-15T22:25:39.901Z",
+        "updatedAt": "2026-03-16T01:28:54.035Z"
+      },
+      {
+        "id": "bldrs-article",
+        "contextId": "bldrs",
+        "name": "Articles",
+        "namePlural": "Articles",
+        "nameSingular": "",
+        "handle": "bldrs-article",
+        "description": "Articles for BLDRS Collective",
+        "icon": "FileText",
+        "color": "magenta",
+        "order": 1,
+        "display": true,
+        "fields": [
+          {
+            "id": "title",
+            "label": "Title",
+            "fieldTypeId": "text",
+            "required": true
+          },
+          {
+            "id": "body",
+            "label": "Body",
+            "fieldTypeId": "textarea",
+            "required": false
+          },
+          {
+            "id": "author",
+            "label": "Author",
+            "fieldTypeId": "text",
+            "required": false
+          },
+          {
+            "id": "category",
+            "label": "Category",
+            "fieldTypeId": "select",
+            "required": false,
+            "options": [
+              "imagine",
+              "design",
+              "build"
+            ]
+          },
+          {
+            "id": "featured_image",
+            "label": "Featured Image",
+            "fieldTypeId": "text",
+            "required": false
+          },
+          {
+            "id": "excerpt",
+            "label": "Excerpt",
+            "fieldTypeId": "text",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-16T01:34:55.410Z",
+        "updatedAt": "2026-03-16T01:38:12.426Z"
+      },
+      {
+        "id": "bldrs-page",
+        "contextId": "bldrs",
+        "name": "Pages",
+        "namePlural": "Pages",
+        "nameSingular": "",
+        "handle": "bldrs-page",
+        "description": "Pages for BLDRS Collective",
+        "icon": "Layout",
+        "color": "gold",
+        "order": 2,
+        "display": true,
+        "fields": [
+          {
+            "id": "title",
+            "label": "Title",
+            "fieldTypeId": "text",
+            "required": true
+          },
+          {
+            "id": "body",
+            "label": "Body",
+            "fieldTypeId": "textarea",
+            "required": false
+          },
+          {
+            "id": "template",
+            "label": "Template",
+            "fieldTypeId": "select",
+            "required": false,
+            "options": [
+              "default",
+              "full-width",
+              "landing"
+            ]
+          },
+          {
+            "id": "parent_page",
+            "label": "Parent Page",
+            "fieldTypeId": "relation",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-16T01:34:55.411Z",
+        "updatedAt": "2026-03-16T01:38:22.270Z"
+      },
+      {
+        "id": "bldrs-project",
+        "contextId": "bldrs",
+        "name": "Projects",
+        "namePlural": "Projects",
+        "nameSingular": "",
+        "handle": "bldrs-project",
+        "description": "Projects for BLDRS Collective",
+        "icon": "Folder",
+        "color": "green",
+        "order": 3,
+        "display": true,
+        "fields": [
+          {
+            "id": "title",
+            "label": "Title",
+            "fieldTypeId": "text",
+            "required": true
+          },
+          {
+            "id": "body",
+            "label": "Body",
+            "fieldTypeId": "textarea",
+            "required": false
+          },
+          {
+            "id": "status",
+            "label": "Status",
+            "fieldTypeId": "select",
+            "required": false,
+            "options": [
+              "active",
+              "completed",
+              "archived"
+            ]
+          },
+          {
+            "id": "team_members",
+            "label": "Team Members",
+            "fieldTypeId": "text",
+            "required": false
+          },
+          {
+            "id": "github_repo",
+            "label": "GitHub Repository",
+            "fieldTypeId": "text",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-16T01:34:55.412Z",
+        "updatedAt": "2026-03-16T01:38:27.984Z"
+      },
+      {
+        "id": "bldrs-event",
+        "contextId": "bldrs",
+        "name": "Events",
+        "namePlural": "Events",
+        "nameSingular": "",
+        "handle": "bldrs-event",
+        "description": "Events for BLDRS Collective",
+        "icon": "Calendar",
+        "color": "cyan",
+        "order": 4,
+        "display": true,
+        "fields": [
+          {
+            "id": "title",
+            "label": "Title",
+            "fieldTypeId": "text",
+            "required": true
+          },
+          {
+            "id": "body",
+            "label": "Body",
+            "fieldTypeId": "textarea",
+            "required": false
+          },
+          {
+            "id": "event_date",
+            "label": "Event Date",
+            "fieldTypeId": "date",
+            "required": false
+          },
+          {
+            "id": "location",
+            "label": "Location",
+            "fieldTypeId": "text",
+            "required": false
+          },
+          {
+            "id": "registration_link",
+            "label": "Registration Link",
+            "fieldTypeId": "text",
+            "required": false
+          }
+        ],
+        "createdAt": "2026-03-16T01:34:55.412Z",
+        "updatedAt": "2026-03-16T01:38:33.520Z"
+      },
+      {
+        "id": "bldrs-course",
+        "contextId": "bldrs",
+        "name": "Courses",
+        "namePlural": "Courses",
+        "nameSingular": "",
+        "handle": "bldrs-course",
+        "description": "Courses for BLDRS Collective",
+        "icon": "GraduationCap",
+        "color": "violet",
+        "order": 5,
+        "display": true,
+        "fields": [
+          {
+            "id": "title",
+            "label": "Title",
+            "fieldTypeId": "text",
+            "required": true
+          },
+          {
+            "id": "body",
+            "label": "Body",
+            "fieldTypeId": "textarea",
+            "required": false
+          },
+          {
+            "id": "instructor",
+            "label": "Instructor",
+            "fieldTypeId": "text",
+            "required": false
+          },
+          {
+            "id": "duration",
+            "label": "Duration",
+            "fieldTypeId": "text",
+            "required": false
+          },
+          {
+            "id": "level",
+            "label": "Level",
+            "fieldTypeId": "select",
+            "required": false,
+            "options": [
+              "beginner",
+              "intermediate",
+              "advanced"
+            ]
+          }
+        ],
+        "createdAt": "2026-03-16T01:34:55.413Z",
+        "updatedAt": "2026-03-16T01:38:39.814Z"
+      },
+      {
+        "id": "galleries",
+        "contextId": "art-of-seeing",
+        "name": "Galleries",
+        "namePlural": "Galleries",
+        "nameSingular": "Gallery",
+        "handle": "galleries",
+        "description": "A collection of art galleries, visited and yet to visit",
+        "icon": "Building",
+        "color": "magenta",
+        "order": 1,
+        "display": true,
+        "fields": [],
+        "createdAt": "2026-03-16T02:07:03.006Z",
+        "updatedAt": "2026-03-16T02:07:03.006Z"
+      }
+    ],
+    "elements": [],
+    "bodies": [],
+    "ecosystems": [
+      {
+        "id": "ecosystem-1773577402066",
+        "name": "WorldLink",
+        "description": "An entity, both corporate and non-profit, engaged in creating curriculum as software, as educational resources, and as in-person classroom facilitation, for creative agency and regenerative living.",
+        "url": "https://goworldlink.org/",
+        "createdAt": "2026-03-15T12:23:22.067Z",
+        "updatedAt": "2026-03-15T12:23:22.067Z"
+      },
+      {
+        "id": "ecosystem-1773578020008",
+        "name": "Builders Collective",
+        "description": "Exploring how we imagine, design, and build the future together—to build creative agency, empathic resilience, and regenerative harmony. We are building a loving world.",
+        "url": "https://builderscollective.org",
+        "createdAt": "2026-03-15T12:33:40.008Z",
+        "updatedAt": "2026-03-15T12:38:08.574Z"
+      }
+    ],
+    "domains": [
+      {
+        "id": "domain-1773578264614",
+        "ecosystemId": "ecosystem-1773578020008",
+        "name": "BLDRS Collective Inc.",
+        "description": "Building Leaders to Design a Resilient Society (BLDRS).",
+        "url": "https://bldrs.co",
+        "createdAt": "2026-03-15T12:37:44.614Z",
+        "updatedAt": "2026-03-15T12:37:44.614Z"
+      },
+      {
+        "id": "domain-1773578750163",
+        "ecosystemId": "ecosystem-1773577402066",
+        "name": "Story.Earth",
+        "description": "Visualizing a world in change: by bringing together maps, globes, and interactive tools, Story.Earth deepens an understanding of Earth system science and inspires planetary stewardship.",
+        "url": "https://story.earth/",
+        "createdAt": "2026-03-15T12:45:50.164Z",
+        "updatedAt": "2026-03-15T12:45:50.164Z"
+      },
+      {
+        "id": "domain-1773578832543",
+        "ecosystemId": "ecosystem-1773577402066",
+        "name": "Nourish",
+        "description": "Nourish is an educational initiative designed to open a meaningful conversation about food, health, and sustainability.",
+        "url": "https://www.nourishlife.org/",
+        "createdAt": "2026-03-15T12:47:12.543Z",
+        "updatedAt": "2026-03-15T12:47:12.543Z"
+      },
+      {
+        "id": "domain-1773579064350",
+        "ecosystemId": "ecosystem-1773577402066",
+        "name": "WorldLink",
+        "description": "The WorldLink website.",
+        "url": "https://goworldlink.org",
+        "createdAt": "2026-03-15T12:51:04.350Z",
+        "updatedAt": "2026-03-15T12:51:04.350Z"
+      }
+    ],
+    "environments": [
+      {
+        "id": "environment-1773579234422",
+        "domainId": "domain-1773579064350",
+        "name": "WorldLink Global Impact",
+        "description": "A dashboard featuring an interactive Dymaxion Map, built as a report to Cisco Foundation.",
+        "url": "https://worldlink-impact.figma.site",
+        "createdAt": "2026-03-15T12:53:54.422Z",
+        "updatedAt": "2026-03-15T12:53:54.422Z"
+      }
+    ]
+  }
+}
