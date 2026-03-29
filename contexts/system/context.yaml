@@ -1,0 +1,57 @@
+# ARC System — Context Definition
+# The meta-layer where ARC manages itself
+
+id: system
+title: System
+description: The meta-layer where ARC manages itself — contexts, types, fields, agents, and configuration.
+
+# ─── Application ────────────────────────────────────────────────────────────
+application:
+  routes:
+    public: null
+    admin: /dashboard/system
+  nav:
+    label: System
+    icon: Settings
+    group: system
+  entryTypes:
+    - environments
+    - extensions
+    - providers
+    - forms
+    - lab
+    - docs
+  defaultView: null
+  features:
+    publicSite: false
+    rss: false
+    search: false
+
+# ─── Presentation ───────────────────────────────────────────────────────────
+presentation:
+  theme: system
+  layout: admin
+  palette:
+    primary: "#1a1a1a"
+    accent: "#6366f1"
+    background: "#f8f8f8"
+    surface: "#ffffff"
+    text: "#1a1a1a"
+    textMuted: "#666666"
+  typography:
+    heading: "Inter"
+    body: "Inter"
+  density: compact
+
+# ─── Structure ──────────────────────────────────────────────────────────────
+# System types are managed in ARC itself, not via YAML schemas
+# Type definitions live in src/app/services/migrations.ts and seed-initializer.ts
+structure:
+  primaryType: null
+  managedInApp: true
+
+# ─── Data ───────────────────────────────────────────────────────────────────
+data:
+  provider: local
+  source: system-data
+  note: System data is stored locally in the browser; not synced to GitHub

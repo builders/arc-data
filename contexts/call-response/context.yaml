@@ -1,0 +1,71 @@
+# Call + Response — Context Definition
+
+id: call-response
+title: Call + Response
+description: Collaborative design practice exploring dialogue, iteration, and creative exchange.
+
+# ─── Application ────────────────────────────────────────────────────────────
+application:
+  routes:
+    public: /call-response
+    admin: /dashboard/call-response
+  nav:
+    label: Call + Response
+    icon: MessageSquare
+    group: studio
+  entryTypes:
+    - call
+    - response
+    - conversation
+    - artifact
+  defaultView: conversation
+  features:
+    publicSite: false
+    rss: false
+    search: true
+
+# ─── Presentation ───────────────────────────────────────────────────────────
+presentation:
+  theme: light
+  layout: conversation
+  palette:
+    primary: "#1a1a1a"
+    accent: "#8b5cf6"
+    background: "#fafafa"
+    surface: "#ffffff"
+    text: "#1a1a1a"
+    textMuted: "#666666"
+  typography:
+    heading: "Inter"
+    body: "Inter"
+  density: comfortable
+
+# ─── Structure ──────────────────────────────────────────────────────────────
+structure:
+  primaryType: conversation
+  types:
+    - id: call
+      schema: ./types/call.yaml
+      listView: list
+      sortDefault: date-desc
+    - id: response
+      schema: ./types/response.yaml
+      listView: list
+      sortDefault: date-desc
+    - id: conversation
+      schema: ./types/conversation.yaml
+      listView: list
+      sortDefault: date-desc
+    - id: artifact
+      schema: ./types/artifact.yaml
+      listView: grid
+      sortDefault: date-desc
+
+# ─── Data ───────────────────────────────────────────────────────────────────
+data:
+  provider: github
+  owner: builders
+  repo: arc-data
+  branch: main
+  path: contexts/call-response/data
+  mediaPath: media/images/call-response

@@ -1,0 +1,52 @@
+id: exhibition
+name: Exhibition
+namePlural: Exhibitions
+icon: Frame
+description: Art exhibitions and shows
+
+fields:
+  - id: title
+    label: Title
+    type: text
+    required: true
+    config:
+      placeholder: Exhibition title
+
+  - id: date
+    label: Date
+    type: date
+    required: true
+
+  - id: gallery
+    label: Gallery
+    type: relation
+    required: false
+    config:
+      relatedType: gallery
+      relationshipType: many-to-one
+
+  - id: artists
+    label: Artists
+    type: text
+    required: false
+    config:
+      placeholder: Artist name(s)
+
+  - id: coverImage
+    label: Cover Image
+    type: url
+    required: false
+    config:
+      placeholder: "https://..."
+
+  - id: tags
+    label: Tags
+    type: tags
+    required: false
+
+  - id: published
+    label: Published
+    type: boolean
+    required: false
+    config:
+      defaultValue: true

@@ -1,0 +1,37 @@
+id: activity
+name: Activity
+namePlural: Activities
+icon: ClipboardList
+description: Course activities, workshops, and field trips
+
+fields:
+  - id: title
+    label: Title
+    type: text
+    required: true
+    config:
+      placeholder: Activity title
+
+  - id: date
+    label: Date
+    type: date
+    required: true
+
+  - id: location
+    label: Location
+    type: text
+    required: false
+    config:
+      placeholder: Location
+
+  - id: tags
+    label: Tags
+    type: tags
+    required: false
+
+  - id: published
+    label: Published
+    type: boolean
+    required: false
+    config:
+      defaultValue: true

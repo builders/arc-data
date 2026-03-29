@@ -1,0 +1,98 @@
+# The Art of Seeing — Context Definition
+# Four dimensions: Application, Presentation, Structure, Data
+
+id: art-of-seeing
+title: The Art of Seeing
+description: A visual culture course exploring photography, observation, and critical seeing.
+
+# ─── Application ────────────────────────────────────────────────────────────
+# Routes, navigation structure, and behavioral configuration
+application:
+  routes:
+    public: /art-of-seeing
+    admin: /dashboard/art-of-seeing
+  nav:
+    label: Art of Seeing
+    icon: Eye
+    group: courses
+  entryTypes:
+    - gallery
+    - exhibition
+    - observation
+    - activity
+    - project
+    - journal-entry
+    - presentation
+  defaultView: gallery
+  features:
+    publicSite: true
+    rss: true
+    search: true
+
+# ─── Presentation ───────────────────────────────────────────────────────────
+# Visual theme, layout, and design tokens
+presentation:
+  theme: light
+  layout: gallery
+  palette:
+    primary: "#1a1a1a"
+    accent: "#c0a882"
+    background: "#f9f7f4"
+    surface: "#ffffff"
+    text: "#1a1a1a"
+    textMuted: "#666666"
+  typography:
+    heading: "Playfair Display"
+    body: "Inter"
+  density: comfortable
+
+# ─── Structure ──────────────────────────────────────────────────────────────
+# Type schemas are defined in ./types/*.yaml
+# This section captures relationships and display config per type
+structure:
+  primaryType: gallery
+  types:
+    - id: gallery
+      schema: ./types/gallery.yaml
+      listView: grid
+      sortDefault: date-desc
+    - id: exhibition
+      schema: ./types/exhibition.yaml
+      listView: list
+      sortDefault: date-desc
+    - id: observation
+      schema: ./types/observation.yaml
+      listView: grid
+      sortDefault: date-desc
+    - id: activity
+      schema: ./types/activity.yaml
+      listView: list
+      sortDefault: date-asc
+    - id: project
+      schema: ./types/project.yaml
+      listView: grid
+      sortDefault: title-asc
+    - id: journal-entry
+      schema: ./types/journal-entry.yaml
+      listView: list
+      sortDefault: date-desc
+    - id: presentation
+      schema: ./types/presentation.yaml
+      listView: list
+      sortDefault: date-asc
+
+# ─── Data ───────────────────────────────────────────────────────────────────
+# Where content lives and how it is synced
+data:
+  provider: github
+  owner: builders
+  repo: arc-data
+  branch: main
+  path: contexts/art-of-seeing/data
+  mediaPath: media/images/art-of-seeing
+  legacyRepo:
+    owner: builders
+    repo: art-of-seeing-design-data
+    branch: main
+    path: data
+    note: Original data repo; migrate entries to arc-data/contexts/art-of-seeing/data
