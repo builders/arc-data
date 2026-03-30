@@ -1,0 +1,30 @@
+id: guest
+name: Guest
+description: >
+  Public access only. Can view published content in contexts that have
+  public sites enabled. No access to the dashboard or draft content.
+
+permissions:
+  contexts:
+    create: false
+    edit: false
+    delete: false
+  types:
+    create: false
+    edit: false
+    delete: false
+  entries:
+    create: false
+    edit: false
+    delete: false
+    publish: false
+  agents:
+    invite: false
+    edit: false
+    delete: false
+    assignRoles: false
+  system:
+    manageProviders: false
+    manageExtensions: false
+    viewDiagnostics: false
+    runMigrations: false

@@ -1,0 +1,30 @@
+id: admin
+name: Admin
+description: >
+  Full access to assigned contexts. Can manage content, types, and invite
+  other agents. Cannot manage providers, extensions, or system configuration.
+
+permissions:
+  contexts:
+    create: false
+    edit: true
+    delete: false
+  types:
+    create: true
+    edit: true
+    delete: true
+  entries:
+    create: true
+    edit: true
+    delete: true
+    publish: true
+  agents:
+    invite: true
+    edit: false
+    delete: false
+    assignRoles: false
+  system:
+    manageProviders: false
+    manageExtensions: false
+    viewDiagnostics: true
+    runMigrations: false

@@ -1,0 +1,39 @@
+handle: stephen
+displayName: Stephen Bau
+email: bauhouse@gmail.com
+
+avatar:
+  strategy: gravatar
+  email: bauhouse@gmail.com
+  fallback: initials
+  initials: SB
+  # Gravatar URL pattern:
+  # https://www.gravatar.com/avatar/{md5(email)}?d=identicon&s=200
+  # Fallback: render initials "SB" in a styled avatar component
+
+auth:
+  provider: supabase
+  userId: null  # Populate from Supabase dashboard: Authentication > Users > bauhouse@gmail.com
+  email: bauhouse@gmail.com
+  # To retrieve: Supabase dashboard > project > Authentication > Users
+  # Or: supabase.auth.getUser() after login returns user.id
+
+role: super-admin
+
+preferences:
+  defaultContext: system
+  theme: system
+  density: comfortable
+
+# Access is granted globally via the super-admin role.
+# Context-specific access records are in ./access/stephen-*.yaml
+# Super-admin bypasses per-context checks, but explicit records
+# are maintained for auditability.
+
+onboardedAt: "2026-03-29T00:00:00.000Z"  # Retroactive registration
+createdAt: "2026-03-29T00:00:00.000Z"
+
+notes: >
+  Original ARC super admin. Registered retroactively during agent schema
+  creation (2026-03-29). Auth was already established via Supabase at
+  install time. Supabase userId to be populated from dashboard.

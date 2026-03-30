@@ -15,6 +15,9 @@ application:
     icon: Settings
     group: system
   entryTypes:
+    - agents
+    - roles
+    - access
     - environments
     - extensions
     - providers
@@ -44,14 +47,37 @@ presentation:
   density: compact
 
 # ─── Structure ──────────────────────────────────────────────────────────────
-# System types are managed in ARC itself, not via YAML schemas
-# Type definitions live in src/app/services/migrations.ts and seed-initializer.ts
 structure:
-  primaryType: null
-  managedInApp: true
+  primaryType: agents
+  types:
+    - id: agent
+      schema: ./types/agent.yaml
+      listView: list
+      sortDefault: handle-asc
+    - id: role
+      schema: ./types/role.yaml
+      listView: list
+      sortDefault: id-asc
+    - id: access
+      schema: ./types/access.yaml
+      listView: list
+      sortDefault: agentHandle-asc
+  # Remaining system types (environments, extensions, providers, forms, lab, docs)
+  # are currently managed in ARC itself via migrations.ts and seed-initializer.ts.
+  # These will be migrated to YAML schemas as the data model matures.
 
 # ─── Data ───────────────────────────────────────────────────────────────────
 data:
-  provider: local
-  source: system-data
-  note: System data is stored locally in the browser; not synced to GitHub
+  # Agents, roles, and access are stored in arc-data (source of truth)
+  provider: github
+  owner: bldrs
+  repo: arc-data
+  branch: main
+  path: contexts/system/data
+  # All other system data (environments, providers, etc.) remains in browser localStorage
+  localFallback:
+    provider: local
+    source: system-data
+    note: >
+      Non-agent system data (environments, providers, extensions, forms)
+      is stored locally in the browser until GitHub sync is extended to cover it.

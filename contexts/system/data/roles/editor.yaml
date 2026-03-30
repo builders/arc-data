@@ -1,0 +1,30 @@
+id: editor
+name: Editor
+description: >
+  Can create, edit, and publish entries in assigned contexts.
+  Cannot manage types, invite agents, or access system configuration.
+
+permissions:
+  contexts:
+    create: false
+    edit: false
+    delete: false
+  types:
+    create: false
+    edit: false
+    delete: false
+  entries:
+    create: true
+    edit: true
+    delete: false
+    publish: true
+  agents:
+    invite: false
+    edit: false
+    delete: false
+    assignRoles: false
+  system:
+    manageProviders: false
+    manageExtensions: false
+    viewDiagnostics: false
+    runMigrations: false

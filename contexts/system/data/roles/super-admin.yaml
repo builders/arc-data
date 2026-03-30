@@ -1,0 +1,31 @@
+id: super-admin
+name: Super Admin
+description: >
+  Full sovereignty over ARC. Can create, edit, and delete anything across
+  all contexts. Can manage agents, assign roles, configure providers,
+  and run system migrations. Assigned only at install time.
+
+permissions:
+  contexts:
+    create: true
+    edit: true
+    delete: true
+  types:
+    create: true
+    edit: true
+    delete: true
+  entries:
+    create: true
+    edit: true
+    delete: true
+    publish: true
+  agents:
+    invite: true
+    edit: true
+    delete: true
+    assignRoles: true
+  system:
+    manageProviders: true
+    manageExtensions: true
+    viewDiagnostics: true
+    runMigrations: true

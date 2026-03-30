@@ -1,0 +1,12 @@
+agentHandle: stephen
+contextId: "*"
+roleId: super-admin
+granted: true
+grantedBy: stephen  # Self-granted at install — no prior agent existed to grant this
+grantedAt: "2026-03-29T00:00:00.000Z"
+
+notes: >
+  Wildcard access grant covering all current and future contexts.
+  Assigned at retroactive onboarding. As additional agents are added,
+  context-specific access records should be created per agent per context
+  rather than using the wildcard pattern.

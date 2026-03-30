@@ -1,0 +1,30 @@
+id: viewer
+name: Viewer
+description: >
+  Read-only access to assigned contexts. Can view published and draft entries
+  but cannot create, edit, or manage anything.
+
+permissions:
+  contexts:
+    create: false
+    edit: false
+    delete: false
+  types:
+    create: false
+    edit: false
+    delete: false
+  entries:
+    create: false
+    edit: false
+    delete: false
+    publish: false
+  agents:
+    invite: false
+    edit: false
+    delete: false
+    assignRoles: false
+  system:
+    manageProviders: false
+    manageExtensions: false
+    viewDiagnostics: false
+    runMigrations: false

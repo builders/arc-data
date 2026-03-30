@@ -1,0 +1,136 @@
+id: role
+name: Role
+namePlural: Roles
+icon: Shield
+description: >
+  A named permission set assigned to agents. Roles define what an agent
+  can see and do across ARC contexts. Context-specific overrides are
+  managed through access records.
+
+fields:
+  - id: id
+    label: ID
+    type: text
+    required: true
+    config:
+      placeholder: "super-admin"
+      hint: Slug identifier. Used in access control checks.
+
+  - id: name
+    label: Name
+    type: text
+    required: true
+    config:
+      placeholder: "Super Admin"
+
+  - id: description
+    label: Description
+    type: textarea
+    required: false
+    config:
+      rows: 2
+
+  - id: permissions
+    label: Permissions
+    type: object
+    required: true
+    config:
+      hint: Global permission flags. Context-specific overrides live in access records.
+      fields:
+        - id: contexts
+          label: Contexts
+          type: object
+          config:
+            fields:
+              - id: create
+                label: Create contexts
+                type: boolean
+                config: { defaultValue: false }
+              - id: edit
+                label: Edit contexts
+                type: boolean
+                config: { defaultValue: false }
+              - id: delete
+                label: Delete contexts
+                type: boolean
+                config: { defaultValue: false }
+        - id: types
+          label: Types
+          type: object
+          config:
+            fields:
+              - id: create
+                label: Create types
+                type: boolean
+                config: { defaultValue: false }
+              - id: edit
+                label: Edit types
+                type: boolean
+                config: { defaultValue: false }
+              - id: delete
+                label: Delete types
+                type: boolean
+                config: { defaultValue: false }
+        - id: entries
+          label: Entries
+          type: object
+          config:
+            fields:
+              - id: create
+                label: Create entries
+                type: boolean
+                config: { defaultValue: false }
+              - id: edit
+                label: Edit entries
+                type: boolean
+                config: { defaultValue: false }
+              - id: delete
+                label: Delete entries
+                type: boolean
+                config: { defaultValue: false }
+              - id: publish
+                label: Publish entries
+                type: boolean
+                config: { defaultValue: false }
+        - id: agents
+          label: Agents
+          type: object
+          config:
+            fields:
+              - id: invite
+                label: Invite agents
+                type: boolean
+                config: { defaultValue: false }
+              - id: edit
+                label: Edit agents
+                type: boolean
+                config: { defaultValue: false }
+              - id: delete
+                label: Delete agents
+                type: boolean
+                config: { defaultValue: false }
+              - id: assignRoles
+                label: Assign roles
+                type: boolean
+                config: { defaultValue: false }
+        - id: system
+          label: System
+          type: object
+          config:
+            fields:
+              - id: manageProviders
+                label: Manage providers
+                type: boolean
+                config: { defaultValue: false }
+              - id: manageExtensions
+                label: Manage extensions
+                type: boolean
+                config: { defaultValue: false }
+              - id: viewDiagnostics
+                label: View diagnostics
+                type: boolean
+                config: { defaultValue: false }
+              - id: runMigrations
+                label: Run migrations
+                type: boolean
+                config: { defaultValue: false }
