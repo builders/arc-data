@@ -1,0 +1,47 @@
+id: call
+name: Call
+namePlural: Calls
+icon: ArrowUpRight
+description: >
+  A significant prompt or request — the opening move in an exchange.
+  Not every message is a call; only those that initiated something
+  meaningful: a new feature, a decision, a pivot.
+
+fields:
+  - id: title
+    label: Title
+    type: text
+    required: true
+
+  - id: date
+    label: Date
+    type: date
+    required: true
+
+  - id: conversationId
+    label: Conversation
+    type: relation
+    required: false
+    config:
+      relatedType: conversation
+      relationshipType: many-to-one
+
+  - id: prompt
+    label: Prompt
+    type: markdown
+    required: true
+    config:
+      hint: "The actual request or question, verbatim or paraphrased"
+
+  - id: intent
+    label: Intent
+    type: textarea
+    required: false
+    config:
+      placeholder: "What was the underlying goal behind this request?"
+      rows: 2
+
+  - id: tags
+    label: Tags
+    type: tags
+    required: false

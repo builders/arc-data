@@ -1,0 +1,57 @@
+id: response
+name: Response
+namePlural: Responses
+icon: ArrowDownLeft
+description: >
+  A significant reply — an answer, a design, an implementation, or a
+  counter-proposal. Paired with a call. Only responses that produced
+  something durable are worth recording here.
+
+fields:
+  - id: title
+    label: Title
+    type: text
+    required: true
+
+  - id: date
+    label: Date
+    type: date
+    required: true
+
+  - id: callId
+    label: Call
+    type: relation
+    required: false
+    config:
+      relatedType: call
+      relationshipType: many-to-one
+
+  - id: outcome
+    label: Outcome
+    type: select
+    required: false
+    config:
+      options:
+        - value: accepted
+          label: Accepted — implemented as proposed
+        - value: modified
+          label: Modified — implemented with changes
+        - value: deferred
+          label: Deferred — noted for later
+        - value: rejected
+          label: Rejected — not pursued
+
+  - id: summary
+    label: Summary
+    type: markdown
+    required: true
+
+  - id: artifacts
+    label: Artifacts produced
+    type: tags
+    required: false
+
+  - id: tags
+    label: Tags
+    type: tags
+    required: false

@@ -1,0 +1,68 @@
+id: artifact
+name: Artifact
+namePlural: Artifacts
+icon: FileCode
+description: >
+  A significant output produced during a conversation — a decision record,
+  an architectural design, a file or set of files, a migration, or a
+  reusable pattern. Artifacts are the durable residue of conversation.
+
+fields:
+  - id: title
+    label: Title
+    type: text
+    required: true
+
+  - id: date
+    label: Date
+    type: date
+    required: true
+
+  - id: kind
+    label: Kind
+    type: select
+    required: true
+    config:
+      options:
+        - value: decision
+          label: Decision — a significant choice made
+        - value: design
+          label: Design — an architecture or system design
+        - value: code
+          label: Code — files created or significantly changed
+        - value: migration
+          label: Migration — a data or schema migration
+        - value: pattern
+          label: Pattern — a reusable approach or convention
+        - value: refactor
+          label: Refactor — a rename, restructure, or cleanup
+
+  - id: project
+    label: Project
+    type: text
+    required: false
+
+  - id: conversationId
+    label: Conversation
+    type: relation
+    required: false
+    config:
+      relatedType: conversation
+      relationshipType: many-to-one
+
+  - id: summary
+    label: Summary
+    type: markdown
+    required: true
+
+  - id: files
+    label: Files affected
+    type: tags
+    required: false
+    config:
+      hint: "File paths created or modified"
+
+  - id: tags
+    label: Tags
+    type: tags
+    required: false
