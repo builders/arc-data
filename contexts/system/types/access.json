@@ -1,0 +1,66 @@
+{
+  "id": "access",
+  "name": "Access",
+  "namePlural": "Access",
+  "icon": "Key",
+  "description": "Context-specific access grants. Binds an agent to a context with a role override. An agent's primary role defines default permissions; access records layer on context-specific grants or restrictions.\n",
+  "fields": [
+    {
+      "id": "agentHandle",
+      "label": "Agent",
+      "type": "relation",
+      "required": true,
+      "config": {
+        "relatedType": "agent",
+        "relationshipType": "many-to-one"
+      }
+    },
+    {
+      "id": "contextId",
+      "label": "Context",
+      "type": "text",
+      "required": true,
+      "config": {
+        "placeholder": "art-of-seeing",
+        "hint": "Context ID this grant applies to. Use '*' for all contexts."
+      }
+    },
+    {
+      "id": "roleId",
+      "label": "Role Override",
+      "type": "relation",
+      "required": false,
+      "config": {
+        "relatedType": "role",
+        "relationshipType": "many-to-one",
+        "hint": "Overrides the agent's primary role for this context only. Leave empty to inherit the agent's primary role.\n"
+      }
+    },
+    {
+      "id": "granted",
+      "label": "Granted",
+      "type": "boolean",
+      "required": true,
+      "config": {
+        "defaultValue": true,
+        "hint": "False = explicitly revoke access for this context regardless of role."
+      }
+    },
+    {
+      "id": "grantedBy",
+      "label": "Granted By",
+      "type": "relation",
+      "required": false,
+      "config": {
+        "relatedType": "agent",
+        "relationshipType": "many-to-one"
+      }
+    },
+    {
+      "id": "grantedAt",
+      "label": "Granted At",
+      "type": "datetime",
+      "required": false
+    }
+  ]
+}

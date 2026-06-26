@@ -1,0 +1,81 @@
+{
+  "id": "project",
+  "name": "Project",
+  "namePlural": "Projects",
+  "icon": "FolderOpen",
+  "description": "Student projects and assignments",
+  "fields": [
+    {
+      "id": "title",
+      "label": "Title",
+      "type": "text",
+      "required": true,
+      "config": {
+        "placeholder": "Project title"
+      }
+    },
+    {
+      "id": "date",
+      "label": "Date",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "dueDate",
+      "label": "Due Date",
+      "type": "date",
+      "required": false
+    },
+    {
+      "id": "status",
+      "label": "Status",
+      "type": "select",
+      "required": false,
+      "config": {
+        "options": [
+          {
+            "value": "draft",
+            "label": "Draft"
+          },
+          {
+            "value": "in-progress",
+            "label": "In Progress"
+          },
+          {
+            "value": "submitted",
+            "label": "Submitted"
+          },
+          {
+            "value": "complete",
+            "label": "Complete"
+          }
+        ],
+        "defaultValue": "draft"
+      }
+    },
+    {
+      "id": "coverImage",
+      "label": "Cover Image",
+      "type": "url",
+      "required": false,
+      "config": {
+        "placeholder": "https://..."
+      }
+    },
+    {
+      "id": "tags",
+      "label": "Tags",
+      "type": "tags",
+      "required": false
+    },
+    {
+      "id": "published",
+      "label": "Published",
+      "type": "boolean",
+      "required": false,
+      "config": {
+        "defaultValue": false
+      }
+    }
+  ]
+}

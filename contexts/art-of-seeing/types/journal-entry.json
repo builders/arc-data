@@ -1,0 +1,39 @@
+{
+  "id": "journal-entry",
+  "name": "Journal Entry",
+  "namePlural": "Journal Entries",
+  "icon": "BookOpen",
+  "description": "Student journal entries and reflections",
+  "fields": [
+    {
+      "id": "title",
+      "label": "Title",
+      "type": "text",
+      "required": true,
+      "config": {
+        "placeholder": "Entry title"
+      }
+    },
+    {
+      "id": "date",
+      "label": "Date",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "tags",
+      "label": "Tags",
+      "type": "tags",
+      "required": false
+    },
+    {
+      "id": "published",
+      "label": "Published",
+      "type": "boolean",
+      "required": false,
+      "config": {
+        "defaultValue": false
+      }
+    }
+  ]
+}

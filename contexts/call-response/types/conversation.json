@@ -1,0 +1,105 @@
+{
+  "id": "conversation",
+  "name": "Conversation",
+  "namePlural": "Conversations",
+  "icon": "MessageSquare",
+  "description": "A thread of exchange between an agent and an AI assistant (or between agents). Captures the arc of a working session \u2014 the problem space, key turns, and outcomes. Not a transcript; a curated record.\n",
+  "fields": [
+    {
+      "id": "title",
+      "label": "Title",
+      "type": "text",
+      "required": true,
+      "config": {
+        "placeholder": "Brief description of the conversation's purpose"
+      }
+    },
+    {
+      "id": "date",
+      "label": "Date",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "participants",
+      "label": "Participants",
+      "type": "tags",
+      "required": false,
+      "config": {
+        "hint": "Agent handles and AI identifiers (e.g. stephen, claude-sonnet-4-6)"
+      }
+    },
+    {
+      "id": "project",
+      "label": "Project",
+      "type": "text",
+      "required": false,
+      "config": {
+        "hint": "Which codebase or product this conversation relates to"
+      }
+    },
+    {
+      "id": "source",
+      "label": "Source",
+      "type": "object",
+      "required": false,
+      "config": {
+        "fields": [
+          {
+            "id": "tool",
+            "label": "Tool",
+            "type": "select",
+            "config": {
+              "options": [
+                {
+                  "value": "claude-code",
+                  "label": "Claude Code (CLI)"
+                },
+                {
+                  "value": "figma-make",
+                  "label": "Figma Make"
+                },
+                {
+                  "value": "claude-web",
+                  "label": "Claude (Web)"
+                },
+                {
+                  "value": "other",
+                  "label": "Other"
+                }
+              ]
+            }
+          },
+          {
+            "id": "sessionId",
+            "label": "Session ID",
+            "type": "text",
+            "config": {
+              "hint": "JSONL filename or session identifier"
+            }
+          },
+          {
+            "id": "turns",
+            "label": "Turn count",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "id": "summary",
+      "label": "Summary",
+      "type": "markdown",
+      "required": true,
+      "config": {
+        "placeholder": "What was the problem? What was decided? What was built?"
+      }
+    },
+    {
+      "id": "tags",
+      "label": "Tags",
+      "type": "tags",
+      "required": false
+    }
+  ]
+}

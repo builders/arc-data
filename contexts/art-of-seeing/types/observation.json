@@ -1,0 +1,58 @@
+{
+  "id": "observation",
+  "name": "Observation",
+  "namePlural": "Observations",
+  "icon": "Eye",
+  "description": "Visual observations and photographic studies",
+  "fields": [
+    {
+      "id": "title",
+      "label": "Title",
+      "type": "text",
+      "required": true,
+      "config": {
+        "placeholder": "Observation title"
+      }
+    },
+    {
+      "id": "date",
+      "label": "Date",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "image",
+      "label": "Image",
+      "type": "url",
+      "required": false,
+      "config": {
+        "placeholder": "https://..."
+      }
+    },
+    {
+      "id": "caption",
+      "label": "Caption",
+      "type": "textarea",
+      "required": false,
+      "config": {
+        "placeholder": "Describe what you see...",
+        "rows": 3
+      }
+    },
+    {
+      "id": "tags",
+      "label": "Tags",
+      "type": "tags",
+      "required": false
+    },
+    {
+      "id": "published",
+      "label": "Published",
+      "type": "boolean",
+      "required": false,
+      "config": {
+        "defaultValue": true
+      }
+    }
+  ]
+}

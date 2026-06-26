@@ -1,0 +1,82 @@
+{
+  "id": "bldrs",
+  "title": "BLDRS Collective",
+  "description": "Studio practice, client projects, and collaborative design work.",
+  "application": {
+    "routes": {
+      "public": "/bldrs",
+      "admin": "/dashboard/bldrs"
+    },
+    "nav": {
+      "label": "BLDRS",
+      "icon": "Layers",
+      "group": "studio"
+    },
+    "entryTypes": [
+      "project",
+      "client",
+      "process",
+      "artifact"
+    ],
+    "defaultView": "project",
+    "features": {
+      "publicSite": false,
+      "rss": false,
+      "search": true
+    }
+  },
+  "presentation": {
+    "theme": "dark",
+    "layout": "studio",
+    "palette": {
+      "primary": "#ffffff",
+      "accent": "#3b82f6",
+      "background": "#0f0f0f",
+      "surface": "#1a1a1a",
+      "text": "#ffffff",
+      "textMuted": "#999999"
+    },
+    "typography": {
+      "heading": "Inter",
+      "body": "Inter"
+    },
+    "density": "compact"
+  },
+  "structure": {
+    "primaryType": "project",
+    "types": [
+      {
+        "id": "project",
+        "schema": "./types/project.yaml",
+        "listView": "grid",
+        "sortDefault": "date-desc"
+      },
+      {
+        "id": "client",
+        "schema": "./types/client.yaml",
+        "listView": "list",
+        "sortDefault": "title-asc"
+      },
+      {
+        "id": "process",
+        "schema": "./types/process.yaml",
+        "listView": "list",
+        "sortDefault": "date-desc"
+      },
+      {
+        "id": "artifact",
+        "schema": "./types/artifact.yaml",
+        "listView": "grid",
+        "sortDefault": "date-desc"
+      }
+    ]
+  },
+  "data": {
+    "provider": "github",
+    "owner": "builders",
+    "repo": "arc-data",
+    "branch": "main",
+    "path": "contexts/bldrs/data",
+    "mediaPath": "media/images/bldrs"
+  }
+}

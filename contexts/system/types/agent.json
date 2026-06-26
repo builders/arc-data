@@ -1,0 +1,226 @@
+{
+  "id": "agent",
+  "name": "Agent",
+  "namePlural": "Agents",
+  "icon": "User",
+  "description": "An agent is a sovereign participant in ARC with agency over their own experience, data, and permissions. Unlike a passive user, an agent can design their own context, customize their environment, and manage their own data relationships.\n",
+  "fields": [
+    {
+      "id": "handle",
+      "label": "Handle",
+      "type": "text",
+      "required": true,
+      "config": {
+        "placeholder": "your-handle",
+        "hint": "Unique slug identifier used across ARC. Lowercase, no spaces."
+      }
+    },
+    {
+      "id": "displayName",
+      "label": "Display Name",
+      "type": "text",
+      "required": true,
+      "config": {
+        "placeholder": "Your Name"
+      }
+    },
+    {
+      "id": "email",
+      "label": "Email",
+      "type": "email",
+      "required": true,
+      "config": {
+        "placeholder": "you@example.com",
+        "hint": "Primary email. Used for Gravatar avatar resolution."
+      }
+    },
+    {
+      "id": "avatar",
+      "label": "Avatar",
+      "type": "object",
+      "required": false,
+      "config": {
+        "fields": [
+          {
+            "id": "strategy",
+            "label": "Strategy",
+            "type": "select",
+            "config": {
+              "options": [
+                {
+                  "value": "gravatar",
+                  "label": "Gravatar (email-based)"
+                },
+                {
+                  "value": "url",
+                  "label": "Custom URL"
+                },
+                {
+                  "value": "initials",
+                  "label": "Initials only"
+                }
+              ],
+              "defaultValue": "gravatar"
+            }
+          },
+          {
+            "id": "url",
+            "label": "Custom URL",
+            "type": "url",
+            "config": {
+              "placeholder": "https://...",
+              "hint": "Used when strategy is 'url'"
+            }
+          },
+          {
+            "id": "initials",
+            "label": "Initials",
+            "type": "text",
+            "config": {
+              "placeholder": "SB",
+              "hint": "Fallback when Gravatar is unavailable or strategy is 'initials'"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "auth",
+      "label": "Auth",
+      "type": "object",
+      "required": true,
+      "config": {
+        "hint": "Auth is provider-agnostic. provider + userId binds this agent record to an external identity provider. Additional providers can be linked via extensions.\n",
+        "fields": [
+          {
+            "id": "provider",
+            "label": "Provider",
+            "type": "select",
+            "config": {
+              "options": [
+                {
+                  "value": "supabase",
+                  "label": "Supabase"
+                },
+                {
+                  "value": "github",
+                  "label": "GitHub"
+                },
+                {
+                  "value": "google",
+                  "label": "Google"
+                },
+                {
+                  "value": "email",
+                  "label": "Email / Password"
+                }
+              ],
+              "defaultValue": "supabase"
+            }
+          },
+          {
+            "id": "userId",
+            "label": "Provider User ID",
+            "type": "text",
+            "config": {
+              "hint": "The unique ID assigned by the auth provider (e.g. Supabase UUID)"
+            }
+          },
+          {
+            "id": "email",
+            "label": "Auth Email",
+            "type": "email",
+            "config": {
+              "hint": "The email registered with the auth provider (may differ from agent email)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "role",
+      "label": "Role",
+      "type": "relation",
+      "required": true,
+      "config": {
+        "relatedType": "role",
+        "relationshipType": "many-to-one",
+        "hint": "Primary role determines default permissions across all contexts."
+      }
+    },
+    {
+      "id": "preferences",
+      "label": "Preferences",
+      "type": "object",
+      "required": false,
+      "config": {
+        "fields": [
+          {
+            "id": "defaultContext",
+            "label": "Default Context",
+            "type": "text",
+            "config": {
+              "placeholder": "system",
+              "hint": "Context ID to load after login"
+            }
+          },
+          {
+            "id": "theme",
+            "label": "Theme",
+            "type": "select",
+            "config": {
+              "options": [
+                {
+                  "value": "system",
+                  "label": "System Default"
+                },
+                {
+                  "value": "light",
+                  "label": "Light"
+                },
+                {
+                  "value": "dark",
+                  "label": "Dark"
+                }
+              ],
+              "defaultValue": "system"
+            }
+          },
+          {
+            "id": "density",
+            "label": "Density",
+            "type": "select",
+            "config": {
+              "options": [
+                {
+                  "value": "comfortable",
+                  "label": "Comfortable"
+                },
+                {
+                  "value": "compact",
+                  "label": "Compact"
+                }
+              ],
+              "defaultValue": "comfortable"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "onboardedAt",
+      "label": "Onboarded At",
+      "type": "datetime",
+      "required": false,
+      "config": {
+        "hint": "When this agent record was first registered"
+      }
+    },
+    {
+      "id": "createdAt",
+      "label": "Created At",
+      "type": "datetime",
+      "required": true
+    }
+  ]
+}

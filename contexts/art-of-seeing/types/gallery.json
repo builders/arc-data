@@ -1,0 +1,57 @@
+{
+  "id": "gallery",
+  "name": "Gallery",
+  "namePlural": "Galleries",
+  "icon": "Building",
+  "description": "Art galleries and exhibition venues",
+  "fields": [
+    {
+      "id": "title",
+      "label": "Title",
+      "type": "text",
+      "required": true,
+      "config": {
+        "placeholder": "Gallery name"
+      }
+    },
+    {
+      "id": "date",
+      "label": "Date",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "location",
+      "label": "Location",
+      "type": "text",
+      "required": false,
+      "config": {
+        "placeholder": "City, Province"
+      }
+    },
+    {
+      "id": "coverImage",
+      "label": "Cover Image",
+      "type": "url",
+      "required": false,
+      "config": {
+        "placeholder": "https://..."
+      }
+    },
+    {
+      "id": "tags",
+      "label": "Tags",
+      "type": "tags",
+      "required": false
+    },
+    {
+      "id": "published",
+      "label": "Published",
+      "type": "boolean",
+      "required": false,
+      "config": {
+        "defaultValue": true
+      }
+    }
+  ]
+}

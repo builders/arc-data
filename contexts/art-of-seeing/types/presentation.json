@@ -1,0 +1,48 @@
+{
+  "id": "presentation",
+  "name": "Presentation",
+  "namePlural": "Presentations",
+  "icon": "Monitor",
+  "description": "Lectures, slideshows, and course presentations",
+  "fields": [
+    {
+      "id": "title",
+      "label": "Title",
+      "type": "text",
+      "required": true,
+      "config": {
+        "placeholder": "Presentation title"
+      }
+    },
+    {
+      "id": "date",
+      "label": "Date",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "slides",
+      "label": "Slides URL",
+      "type": "url",
+      "required": false,
+      "config": {
+        "placeholder": "https://..."
+      }
+    },
+    {
+      "id": "tags",
+      "label": "Tags",
+      "type": "tags",
+      "required": false
+    },
+    {
+      "id": "published",
+      "label": "Published",
+      "type": "boolean",
+      "required": false,
+      "config": {
+        "defaultValue": false
+      }
+    }
+  ]
+}
