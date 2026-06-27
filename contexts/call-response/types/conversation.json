@@ -87,19 +87,19 @@
       }
     },
     {
-      "id": "summary",
+      "id": "tags",
+      "label": "Tags",
+      "type": "tags",
+      "required": false
+    },
+    {
+      "id": "body",
       "label": "Summary",
       "type": "markdown",
       "required": true,
       "config": {
         "placeholder": "What was the problem? What was decided? What was built?"
       }
-    },
-    {
-      "id": "tags",
-      "label": "Tags",
-      "type": "tags",
-      "required": false
     }
   ]
 }

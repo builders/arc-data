@@ -68,12 +68,6 @@
       }
     },
     {
-      "id": "summary",
-      "label": "Summary",
-      "type": "markdown",
-      "required": true
-    },
-    {
       "id": "files",
       "label": "Files affected",
       "type": "tags",
@@ -87,6 +81,12 @@
       "label": "Tags",
       "type": "tags",
       "required": false
+    },
+    {
+      "id": "body",
+      "label": "Summary",
+      "type": "markdown",
+      "required": true
     }
   ]
 }

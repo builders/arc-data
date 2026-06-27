@@ -47,25 +47,25 @@
     "types": [
       {
         "id": "call",
-        "schema": "./types/call.yaml",
+        "schema": "./types/call.json",
         "listView": "list",
         "sortDefault": "date-desc"
       },
       {
         "id": "response",
-        "schema": "./types/response.yaml",
+        "schema": "./types/response.json",
         "listView": "list",
         "sortDefault": "date-desc"
       },
       {
         "id": "conversation",
-        "schema": "./types/conversation.yaml",
+        "schema": "./types/conversation.json",
         "listView": "list",
         "sortDefault": "date-desc"
       },
       {
         "id": "artifact",
-        "schema": "./types/artifact.yaml",
+        "schema": "./types/artifact.json",
         "listView": "grid",
         "sortDefault": "date-desc"
       }

@@ -28,15 +28,6 @@
       }
     },
     {
-      "id": "prompt",
-      "label": "Prompt",
-      "type": "markdown",
-      "required": true,
-      "config": {
-        "hint": "The actual request or question, verbatim or paraphrased"
-      }
-    },
-    {
       "id": "intent",
       "label": "Intent",
       "type": "textarea",
@@ -51,6 +42,15 @@
       "label": "Tags",
       "type": "tags",
       "required": false
+    },
+    {
+      "id": "body",
+      "label": "Prompt",
+      "type": "markdown",
+      "required": true,
+      "config": {
+        "hint": "The actual request or question, verbatim or paraphrased"
+      }
     }
   ]
 }

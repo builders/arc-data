@@ -54,12 +54,6 @@
       }
     },
     {
-      "id": "summary",
-      "label": "Summary",
-      "type": "markdown",
-      "required": true
-    },
-    {
       "id": "artifacts",
       "label": "Artifacts produced",
       "type": "tags",
@@ -70,6 +64,12 @@
       "label": "Tags",
       "type": "tags",
       "required": false
+    },
+    {
+      "id": "body",
+      "label": "Summary",
+      "type": "markdown",
+      "required": true
     }
   ]
 }
