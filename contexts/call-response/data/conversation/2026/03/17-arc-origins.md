@@ -9,5 +9,8 @@ source:
   tool: figma-make
   sessionId: EvzuX8RGhdq3pC42VDrSZK
   turns: 1
+tags:
+  - arc
 ---
 
+Manage your daily journal, tasks, and resources with a powerful Markdown editor that ensures data sovereignty and version control through GitHub integration.
