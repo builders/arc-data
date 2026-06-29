@@ -1,6 +1,6 @@
 ---
 title: Create a Journal
-date: 2026-03-18T00:00:00.000Z
+date: 2026-03-11T00:00:00.000Z
 conversationId: contexts/call-response/data/conversation/2026/03/17-arc-origins.md
 intent: Create a Journal as an experiment in data sovereignty
 tags:
